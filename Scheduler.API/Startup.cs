@@ -12,7 +12,7 @@ using System.Net;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.Diagnostics;
 using Scheduler.API.Core;
-
+using MySQL.Data.EntityFrameworkCore.Extensions;
 namespace Scheduler.API
 {
     public class Startup
@@ -59,7 +59,7 @@ namespace Scheduler.API
                         options.UseInMemoryDatabase();
                         break;
                     default:
-                        options.UseSqlServer(sqlConnectionString,
+                        options.UseMySQL(sqlConnectionString,
                     b => b.MigrationsAssembly("Scheduler.API"));
                     break;
                 }
