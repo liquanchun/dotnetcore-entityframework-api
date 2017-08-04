@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduler.Model", "Scheduler.Model\Scheduler.Model.csproj", "{6B8A8A76-7D33-4F3A-B012-908D46DACF8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.App.Model", "Hotel.App.Model\Hotel.App.Model.csproj", "{6B8A8A76-7D33-4F3A-B012-908D46DACF8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduler.Data", "Scheduler.Data\Scheduler.Data.csproj", "{83AA2666-2D40-41A1-9B1E-BE334156B48B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.App.Data", "Hotel.App.Data\Hotel.App.Data.csproj", "{83AA2666-2D40-41A1-9B1E-BE334156B48B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scheduler.API", "Scheduler.API\Scheduler.API.csproj", "{004F996F-3F86-4203-AC9A-91DADEA654A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.App.API", "Hotel.App.API\Hotel.App.API.csproj", "{004F996F-3F86-4203-AC9A-91DADEA654A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

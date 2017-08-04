@@ -245,7 +245,7 @@ ModelManifest.xml
 .fake/
 
 # Migrations folder
-Scheduler.API/Migrations
-/Scheduler.API/Properties/PublishProfiles
+Hotel.App.API/Migrations
+/Hotel.App.API/Properties/PublishProfiles
 
-Scheduler.API/appsettings.json
+Hotel.App.API/appsettings.json
