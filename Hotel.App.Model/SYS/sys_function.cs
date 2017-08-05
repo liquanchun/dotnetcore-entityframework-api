@@ -13,27 +13,27 @@ namespace Hotel.App.Model.SYS
         /// <summary>
         /// function_name
         /// </summary>		
-        public string function_name { get; set; }
+        public string FunctionName { get; set; }
         /// <summary>
         /// function_addr
         /// </summary>		
-        public string function_addr { get; set; }
+        public string FunctionAddr { get; set; }
         /// <summary>
         /// component
         /// </summary>		
-        public string component { get; set; }
+        public string Component { get; set; }
         /// <summary>
         /// menu_id
         /// </summary>		
-        public int menu_id { get; set; }
+        public int MenuId { get; set; }
         /// <summary>
         /// createdAt
         /// </summary>		
-        public DateTime createdAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         /// <summary>
         /// updatedAt
         /// </summary>		
-        public DateTime updatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
     }
 }

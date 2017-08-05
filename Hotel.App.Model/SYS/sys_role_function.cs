@@ -9,11 +9,11 @@ namespace Hotel.App.Model.SYS
 		/// <summary>
 		/// role_id
         /// </summary>		
-                public int role_id{ get; set; }     
+                public int RoleId{ get; set; }     
 		/// <summary>
 		/// function_id
         /// </summary>		
-                public int function_id{ get; set; }     
+                public int FunctionId{ get; set; }     
 		   
 	}
 }

@@ -10,27 +10,27 @@ namespace Hotel.App.Model.SYS
 		/// <summary>
 		/// user_id
         /// </summary>		
-                public string user_id{ get; set; }     
+                public string UserId{ get; set; }     
 		/// <summary>
 		/// menu_id
         /// </summary>		
-                public int menu_id{ get; set; }     
+                public int MenuId{ get; set; }     
 		/// <summary>
 		/// function_id
         /// </summary>		
-                public int function_id{ get; set; }     
+                public int FunctionId{ get; set; }     
 		/// <summary>
 		/// createdAt
         /// </summary>		
-                public DateTime createdAt{ get; set; }     
+                public DateTime CreatedAt{ get; set; }     
 		/// <summary>
 		/// updatedAt
         /// </summary>		
-                public DateTime updatedAt{ get; set; }     
+                public DateTime UpdatedAt{ get; set; }     
 		/// <summary>
 		/// desc
         /// </summary>		
-                public string desc{ get; set; }     
+                public string Desc{ get; set; }     
 		   
 	}
 }

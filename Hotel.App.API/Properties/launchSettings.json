@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:8153/Project_Readme.html",
+      "applicationUrl": "http://localhost:8153/",
       "sslPort": 0
     }
   },

@@ -25,19 +25,19 @@ namespace Hotel.App.Data.Repositories.SYS
             modelBuilder.Entity<sys_role_function>()
                 .ToTable("sys_role_function");
 
-            modelBuilder.Entity<sys_function>()
+            modelBuilder.Entity<sys_role_menu>()
                 .ToTable("sys_role_menu");
 
-            modelBuilder.Entity<sys_menu>()
+            modelBuilder.Entity<sys_role_user>()
                 .ToTable("sys_role_user");
 
-            modelBuilder.Entity<sys_org>()
+            modelBuilder.Entity<sys_user>()
                 .ToTable("sys_user");
 
-            modelBuilder.Entity<sys_role>()
+            modelBuilder.Entity<user_access_log>()
                 .ToTable("user_access_log");
 
-            modelBuilder.Entity<sys_role_function>()
+            modelBuilder.Entity<user_login_log>()
                 .ToTable("user_login_log");
         }
     }

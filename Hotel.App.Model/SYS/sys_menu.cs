@@ -7,27 +7,27 @@ namespace Hotel.App.Model.SYS
 		/// <summary>
 		/// menu_name
         /// </summary>		
-                public string menu_name{ get; set; }     
+                public string MenuName{ get; set; }     
 		/// <summary>
 		/// parent_menu_id
         /// </summary>		
-                public int parent_menu_id{ get; set; }     
+                public int ParentMenuId{ get; set; }     
 		/// <summary>
 		/// menu_level
         /// </summary>		
-                public int menu_level{ get; set; }     
+                public int MenuLevel{ get; set; }     
 		/// <summary>
 		/// menu_addr
         /// </summary>		
-                public string menu_addr{ get; set; }     
+                public string MenuAddr{ get; set; }     
 		/// <summary>
 		/// createdAt
         /// </summary>		
-                public DateTime createdAt{ get; set; }     
+                public DateTime CreatedAt{ get; set; }     
 		/// <summary>
 		/// updatedAt
         /// </summary>		
-        public DateTime updatedAt{ get; set; }     
+        public DateTime UpdatedAt{ get; set; }     
 		   
 	}
 }

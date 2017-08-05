@@ -89,6 +89,7 @@ namespace Hotel.App.API
         public void Configure(IApplicationBuilder app)
         {
             app.UseStaticFiles();
+            app.UseFileServer();
             // Add MVC to the request pipeline.
             app.UseCors(builder =>
                 builder.AllowAnyOrigin()

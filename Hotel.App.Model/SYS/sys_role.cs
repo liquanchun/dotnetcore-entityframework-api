@@ -10,19 +10,19 @@ namespace Hotel.App.Model.SYS
         /// <summary>
         /// role_name
         /// </summary>		
-        public string role_name { get; set; }
+        public string RoleName { get; set; }
         /// <summary>
         /// role_desc
         /// </summary>		
-        public string role_desc { get; set; }
+        public string RoleDesc { get; set; }
         /// <summary>
         /// createdAt
         /// </summary>		
-        public DateTime createdAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         /// <summary>
         /// updatedAt
         /// </summary>		
-        public DateTime updatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
     }
 }

@@ -18,7 +18,8 @@ namespace Hotel.App.Data
 
         private static void InitializeSchedules()
         {
-            if(!context.Users.Any())
+            #region 测试数据
+            if (!context.Users.Any())
             {
                 User user_01 = new User { Name = "Chris Sakellarios", Profession = "Developer", Avatar = "avatar_02.png" };
 
@@ -39,7 +40,7 @@ namespace Hotel.App.Data
                 context.SaveChanges();
             }
 
-            if(!context.Schedules.Any())
+            if (!context.Schedules.Any())
             {
                 Schedule schedule_01 = new Schedule
                 {
@@ -58,7 +59,7 @@ namespace Hotel.App.Data
                         new Attendee() { ScheduleId = 1, UserId = 2 },
                         new Attendee() { ScheduleId = 1, UserId = 3 },
                         new Attendee() { ScheduleId = 1, UserId = 4 }
-                    }                    
+                    }
                 };
 
                 Schedule schedule_02 = new Schedule
@@ -189,6 +190,7 @@ namespace Hotel.App.Data
             }
 
             context.SaveChanges();
+            #endregion
         }
     }
 }

@@ -10,23 +10,23 @@ namespace Hotel.App.Model.SYS
 		/// <summary>
 		/// user_id
         /// </summary>		
-                public string user_id{ get; set; }     
+                public string UserId{ get; set; }     
 		/// <summary>
 		/// login_info
         /// </summary>		
-                public string login_info{ get; set; }     
+                public string LoginInfo{ get; set; }     
 		/// <summary>
 		/// login_IP
         /// </summary>		
-                public string login_IP{ get; set; }     
+                public string LoginIP{ get; set; }     
 		/// <summary>
 		/// createdAt
         /// </summary>		
-                public DateTime createdAt{ get; set; }     
+                public DateTime CreatedAt{ get; set; }     
 		/// <summary>
 		/// updatedAt
         /// </summary>		
-                public DateTime updatedAt{ get; set; }     
+                public DateTime UpdatedAt{ get; set; }     
 		   
 	}
 }

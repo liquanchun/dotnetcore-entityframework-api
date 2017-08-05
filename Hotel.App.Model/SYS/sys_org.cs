@@ -6,27 +6,23 @@ namespace Hotel.App.Model.SYS
       	/// <summary>
 		/// auto_increment
         /// </summary>		
-		        public int Id { get; set; }     
-		/// <summary>
-		/// dept_id
-        /// </summary>		
-                public string dept_id{ get; set; }     
+		        public int Id { get; set; }        
 		/// <summary>
 		/// dept_name
         /// </summary>		
-                public string dept_name{ get; set; }     
+                public string DeptName{ get; set; }     
 		/// <summary>
 		/// parent_org_id
         /// </summary>		
-                public int parent_org_id{ get; set; }     
+                public int ParentOrgId { get; set; }     
 		/// <summary>
 		/// createdAt
         /// </summary>		
-                public DateTime createdAt{ get; set; }     
+                public DateTime CreatedAt { get; set; }     
 		/// <summary>
 		/// updatedAt
         /// </summary>		
-                public DateTime updatedAt{ get; set; }     
+                public DateTime UpdatedAt{ get; set; }     
 		   
 	}
 }

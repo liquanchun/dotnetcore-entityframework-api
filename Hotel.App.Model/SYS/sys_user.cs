@@ -7,49 +7,49 @@ namespace Hotel.App.Model.SYS
         /// <summary>
         /// user_id
         /// </summary>		
-        public string user_id { get; set; }
+        public string UserId { get; set; }
         /// <summary>
         /// user_name
         /// </summary>		
-        public string user_name { get; set; }
+        public string UserName { get; set; }
         /// <summary>
         /// mobile
         /// </summary>		
-        public string mobile { get; set; }
+        public string Mobile { get; set; }
         /// <summary>
         /// weixin
         /// </summary>		
-        public string weixin { get; set; }
+        public string Weixin { get; set; }
         /// <summary>
         /// email
         /// </summary>		
-        public string email { get; set; }
+        public string Email { get; set; }
         /// <summary>
         /// pwd
         /// </summary>		
-        public string pwd { get; set; }
+        public string Pwd { get; set; }
         /// <summary>
         /// last_login_time
         /// </summary>		
-        public string last_login_time { get; set; }
+        public string LastLoginTime { get; set; }
         /// <summary>
         /// org_id
         /// </summary>		
-        public int org_id { get; set; }
+        public int OrgId { get; set; }
         /// <summary>
         /// updatedAt
         /// </summary>		
-        public DateTime updatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         /// <summary>
         /// createdAt
         /// </summary>		
-        public DateTime createdAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         /// <summary>
         /// isvalid
         /// </summary>		
-        public bool isvalid { get; set; }
+        public bool IsValid { get; set; }
 
-        public string roleids { get; set; }
+        public string RoleIds { get; set; }
 
     }
 }
