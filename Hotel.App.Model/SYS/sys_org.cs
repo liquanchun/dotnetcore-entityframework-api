@@ -1,29 +1,37 @@
 using System;
+using System.Collections.Generic;
+
 namespace Hotel.App.Model.SYS
 {
-	public class sys_org : IEntityBase
-    {   		     
-      	/// <summary>
-		/// auto_increment
+    public class sys_org : IEntityBase
+    {
+        public sys_org()
+        {
+            UserList = new List<sys_user>();
+        }
+        /// <summary>
+        /// auto_increment
         /// </summary>		
-		        public int Id { get; set; }        
-		/// <summary>
-		/// dept_name
+        public int Id { get; set; }
+        /// <summary>
+        /// dept_name
         /// </summary>		
-                public string DeptName{ get; set; }     
-		/// <summary>
-		/// parent_org_id
+        public string DeptName { get; set; }
+        /// <summary>
+        /// parent_org_id
         /// </summary>		
-                public int ParentOrgId { get; set; }     
-		/// <summary>
-		/// createdAt
+        public int ParentId { get; set; }
+        /// <summary>
+        /// createdAt
         /// </summary>		
-                public DateTime CreatedAt { get; set; }     
-		/// <summary>
-		/// updatedAt
+        public DateTime CreatedAt { get; set; }
+        /// <summary>
+        /// updatedAt
         /// </summary>		
-                public DateTime UpdatedAt{ get; set; }     
-		   
-	}
+        public DateTime UpdatedAt { get; set; }
+
+        public ICollection<sys_user> UserList { get; set; }
+
+    }
 }
 

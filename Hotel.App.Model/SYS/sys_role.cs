@@ -1,8 +1,14 @@
 using System;
+using System.Collections.Generic;
+
 namespace Hotel.App.Model.SYS
 {
     public class sys_role : IEntityBase
     {
+        public sys_role()
+        {
+            RoleUserList = new List<sys_role_user>();
+        }
         /// <summary>
         /// auto_increment
         /// </summary>		
@@ -23,6 +29,8 @@ namespace Hotel.App.Model.SYS
         /// updatedAt
         /// </summary>		
         public DateTime UpdatedAt { get; set; }
+
+        public ICollection<sys_role_user> RoleUserList { get; set; }
 
     }
 }

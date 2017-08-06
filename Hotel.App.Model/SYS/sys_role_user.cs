@@ -1,20 +1,24 @@
 namespace Hotel.App.Model.SYS
 {
-	public class sys_role_user : IEntityBase
-    {   		     
-      	/// <summary>
-		/// auto_increment
+    public class sys_role_user : IEntityBase
+    {
+        /// <summary>
+        /// auto_increment
         /// </summary>		
-		        public int Id { get; set; }     
-		/// <summary>
-		/// role_id
+        public int Id { get; set; }
+        /// <summary>
+        /// role_id
         /// </summary>		
-                public int RoleId{ get; set; }     
-		/// <summary>
-		/// user_id
+        public int RoleId { get; set; }
+        /// <summary>
+        /// user_id
         /// </summary>		
-                public string UserId{ get; set; }     
-		   
-	}
+        public int UserId { get; set; }
+
+        public sys_role Role { get; set; }
+
+        public sys_user User { get; set; }
+
+    }
 }
 

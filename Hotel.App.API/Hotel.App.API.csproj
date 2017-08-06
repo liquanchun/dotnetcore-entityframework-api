@@ -12,6 +12,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Controllers\SchedulesController.cs" />
+    <Content Include="Controllers\SYS\SysDicController.cs" />
+    <Content Include="Controllers\SYS\SysFunctionController.cs" />
+    <Content Include="Controllers\SYS\SysMenuController.cs" />
+    <Content Include="Controllers\SYS\SysOrgController.cs" />
+    <Content Include="Controllers\SYS\SysRoleController.cs" />
+    <Content Include="Controllers\SYS\SysUserController.cs" />
+    <Content Include="Controllers\UsersController.cs" />
     <Content Include="wwwroot\index.html" />
   </ItemGroup>
 

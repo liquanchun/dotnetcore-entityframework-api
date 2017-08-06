@@ -28,6 +28,8 @@ namespace Hotel.App.Data
         public DbSet<user_access_log> UserAccessLogs { get; set; }
         public DbSet<user_login_log> UserLoginLogs { get; set; }
 
+        public DbSet<sys_dic> SysDics { get; set; }
+
         public HotelAppContext(DbContextOptions options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

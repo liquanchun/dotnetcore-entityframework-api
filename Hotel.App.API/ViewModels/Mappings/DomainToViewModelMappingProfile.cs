@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Hotel.App.Model;
+using Hotel.App.Model.SYS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,8 @@ namespace Hotel.App.API.ViewModels.Mappings
             Mapper.CreateMap<User, UserViewModel>()
                 .ForMember(vm => vm.SchedulesCreated,
                     map => map.MapFrom(u => u.SchedulesCreated.Count()));
+
+            Mapper.CreateMap<sys_user, SysUserViewModel>();
         }
     }
 }

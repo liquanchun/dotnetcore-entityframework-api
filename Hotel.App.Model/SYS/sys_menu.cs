@@ -11,7 +11,7 @@ namespace Hotel.App.Model.SYS
 		/// <summary>
 		/// parent_menu_id
         /// </summary>		
-                public int ParentMenuId{ get; set; }     
+                public int ParentId{ get; set; }     
 		/// <summary>
 		/// menu_level
         /// </summary>		

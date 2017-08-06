@@ -27,6 +27,8 @@ namespace Hotel.App.API
             services.AddScoped<IUserAccessLogRepository, UserAccessLogRepository>();
             services.AddScoped<IUserLoginLogRepository, UserLoginLogRepository>();
             services.AddScoped<ISysUserRepository, SysUserRepository>();
+
+            services.AddScoped<ISysDicRepository, SysDicRepository>();
         }
     }
 }
