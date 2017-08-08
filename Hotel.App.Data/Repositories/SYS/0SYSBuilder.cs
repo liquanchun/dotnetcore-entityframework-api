@@ -25,13 +25,13 @@ namespace Hotel.App.Data.Repositories.SYS
             modelBuilder.Entity<sys_role_menu>().ToTable("sys_role_menu");
 
             modelBuilder.Entity<sys_role_user>().ToTable("sys_role_user");
-            modelBuilder.Entity<sys_role_user>().HasOne(a => a.Role).WithMany(u => u.RoleUserList).HasForeignKey(a => a.RoleId);
+            //modelBuilder.Entity<sys_role_user>().HasOne(a => a.Role).WithMany(u => u.RoleUserList).HasForeignKey(a => a.RoleId);
             //modelBuilder.Entity<sys_role_user>().HasOne(a => a.User).WithMany(u => u.RoleUserList).HasForeignKey(a => a.UserId);
 
 
             modelBuilder.Entity<sys_user>().ToTable("sys_user");
             modelBuilder.Entity<sys_user>().HasKey("Id");
-            modelBuilder.Entity<sys_user>().HasOne(a => a.Org).WithMany(u => u.UserList).HasForeignKey(a => a.OrgId);
+            //modelBuilder.Entity<sys_user>().HasOne(a => a.Org).WithMany(u => u.UserList).HasForeignKey(a => a.OrgId);
 
             modelBuilder.Entity<user_access_log>().ToTable("user_access_log");
 

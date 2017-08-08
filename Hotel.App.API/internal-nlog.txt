@@ -1,0 +1,6 @@
+2017-08-08 23:35:58.9893 Error Error parsing layout specialfolder will be ignored. Exception: System.ArgumentException: LayoutRenderer cannot be found: 'specialfolder'
+   at NLog.Config.Factory`2.CreateInstance(String name)
+   at NLog.Layouts.LayoutParser.ParseLayoutRenderer(ConfigurationItemFactory configurationItemFactory, SimpleStringReader sr)
+2017-08-08 23:35:59.1493 Error Error parsing layout specialfolder will be ignored. Exception: System.ArgumentException: LayoutRenderer cannot be found: 'specialfolder'
+   at NLog.Config.Factory`2.CreateInstance(String name)
+   at NLog.Layouts.LayoutParser.ParseLayoutRenderer(ConfigurationItemFactory configurationItemFactory, SimpleStringReader sr)

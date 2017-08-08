@@ -26,7 +26,7 @@ namespace Hotel.App.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return new OkObjectResult(_sysOrgRpt.AllIncluding(f => f.UserList).ToList());
+            return new OkObjectResult(_sysOrgRpt.GetAll());
         }
         /// <summary>
         /// 获取组织下面的用户

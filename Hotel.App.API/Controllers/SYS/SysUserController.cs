@@ -28,7 +28,7 @@ namespace Hotel.App.API.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var users = _sysUserRpt.AllIncluding(a => a.RoleUserList).Where(f => f.IsValid).ToList();
+            var users = _sysUserRpt.FindBy(f => f.IsValid);
             IEnumerable<SysUserViewModel> _usersVM = Mapper.Map<IEnumerable<sys_user>, IEnumerable<SysUserViewModel>>(users);
             foreach (var item in _usersVM)
             {

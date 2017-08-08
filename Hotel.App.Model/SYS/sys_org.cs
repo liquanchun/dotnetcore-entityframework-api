@@ -5,10 +5,6 @@ namespace Hotel.App.Model.SYS
 {
     public class sys_org : IEntityBase
     {
-        public sys_org()
-        {
-            UserList = new List<sys_user>();
-        }
         /// <summary>
         /// auto_increment
         /// </summary>		
@@ -29,8 +25,6 @@ namespace Hotel.App.Model.SYS
         /// updatedAt
         /// </summary>		
         public DateTime UpdatedAt { get; set; }
-
-        public ICollection<sys_user> UserList { get; set; }
 
     }
 }

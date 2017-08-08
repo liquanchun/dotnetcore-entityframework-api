@@ -5,14 +5,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Hotel.App.Data;
-using Hotel.App.Data.Repositories;
-using Hotel.App.Data.Abstract;
 using Hotel.App.API.ViewModels.Mappings;
 using System.Net;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.Diagnostics;
 using Hotel.App.API.Core;
 using MySQL.Data.EntityFrameworkCore.Extensions;
+using Microsoft.Extensions.Logging;
+using NLog.Extensions.Logging;
+using NLog.Web;
 namespace Hotel.App.API
 {
     public class Startup
@@ -86,8 +87,13 @@ namespace Hotel.App.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
+            //add NLog to ASP.NET Core
+            loggerFactory.AddNLog();
+            //add NLog.Web
+            app.AddNLogWeb();
+
             app.UseStaticFiles();
             app.UseFileServer();
             // Add MVC to the request pipeline.
@@ -108,6 +114,11 @@ namespace Hotel.App.API
                         var error = context.Features.Get<IExceptionHandlerFeature>();
                         if (error != null)
                         {
+                            var logger = loggerFactory.CreateLogger("UnHandler Error");
+                            logger.LogError(error.Error.Message + ". {path}", context.Request.Path);
+                            logger.LogError(error.Error.InnerException.Message);
+                            logger.LogError(error.Error.StackTrace.ToString());
+
                             context.Response.AddApplicationError(error.Error.Message);
                             await context.Response.WriteAsync(error.Error.Message).ConfigureAwait(false);
                         }

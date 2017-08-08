@@ -15,10 +15,6 @@ namespace Hotel.App.Model.SYS
         /// </summary>		
         public int UserId { get; set; }
 
-        public sys_role Role { get; set; }
-
-        public sys_user User { get; set; }
-
     }
 }
 

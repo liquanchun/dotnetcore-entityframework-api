@@ -5,10 +5,6 @@ namespace Hotel.App.Model.SYS
 {
     public class sys_user : IEntityBase
     {
-        public sys_user()
-        {
-            RoleUserList = new List<sys_role_user>();
-        }
         public int Id { get; set; }
         /// <summary>
         /// user_id
@@ -57,9 +53,6 @@ namespace Hotel.App.Model.SYS
 
         public string RoleIds { get; set; }
 
-        public ICollection<sys_role_user> RoleUserList { get; set; }
-
-        public sys_org Org;
     }
 }
 
