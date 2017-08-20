@@ -1,7 +1,11 @@
-using System;
-namespace Hotel.App.Model.SYS
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Hotel.App.API.ViewModels
 {
-    public class sys_menu : IEntityBase
+    public class SysMenuViewModel
     {
         public int Id { get; set; }
         /// <summary>
@@ -34,6 +38,7 @@ namespace Hotel.App.Model.SYS
         public DateTime UpdatedAt { get; set; }
 
         public string RoleIds { get; set; }
+
+        public string RoleNames { get; set; }
     }
 }
-

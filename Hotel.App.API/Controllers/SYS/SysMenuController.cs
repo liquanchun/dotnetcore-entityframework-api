@@ -17,16 +17,38 @@ namespace Hotel.App.API.Controllers
     {
         private ISysMenuRepository _sysMenuRpt;
         private ISysRoleMenuRepository _sysRoleMenuRpt;
-        public SysMenuController(ISysMenuRepository sysMenuRpt,ISysRoleMenuRepository sysRoleMenuRpt)
+        private ISysRoleRepository _sysRoleRpt;
+        public SysMenuController(ISysMenuRepository sysMenuRpt,ISysRoleMenuRepository sysRoleMenuRpt, ISysRoleRepository sysRoleRpt)
         {
             _sysMenuRpt = sysMenuRpt;
             _sysRoleMenuRpt = sysRoleMenuRpt;
+            _sysRoleRpt = sysRoleRpt;
         }
         // GET: api/values
         [HttpGet]
         public IActionResult Get()
         {
-            return new OkObjectResult(_sysMenuRpt.GetAll().ToList());
+            IEnumerable<SysMenuViewModel> _menusVM = Mapper.Map<IEnumerable<sys_menu>, IEnumerable<SysMenuViewModel>>(_sysMenuRpt.GetAll());
+            foreach (var item in _menusVM)
+            {
+                //角色名称转换
+                List<string> roleName = new List<string>();
+                if (!string.IsNullOrEmpty(item.RoleIds))
+                {
+                    string[] roleid = item.RoleIds.Split(",".ToCharArray());
+                    for (int i = 0; i < roleid.Length; i++)
+                    {
+                        var role = _sysRoleRpt.GetSingle(int.Parse(roleid[i]));
+                        if (role != null)
+                        {
+                            roleName.Add(role.RoleName);
+                        }
+                    }
+                }
+                item.RoleNames = string.Join(",", roleName);
+            }
+
+            return new OkObjectResult(_menusVM);
         }
         // GET api/values/5
         [HttpGet("{id}")]
@@ -57,6 +79,20 @@ namespace Hotel.App.API.Controllers
             value.UpdatedAt = DateTime.Now;
             _sysMenuRpt.Add(value);
             _sysMenuRpt.Commit();
+            if (!string.IsNullOrEmpty(value.RoleIds) && value.RoleIds.Length > 1)
+            {
+                //新增用户角色关系表
+                string[] roles = value.RoleIds.Split(",".ToArray());
+                foreach (var item in roles)
+                {
+                    if (!string.IsNullOrEmpty(item))
+                    {
+                        var userrole = new sys_role_menu { RoleId = int.Parse(item), MenuId = value.Id };
+                        _sysRoleMenuRpt.Add(userrole);
+                    }
+                }
+                _sysRoleMenuRpt.Commit();
+            }
             return new OkObjectResult(value);
         }
         /// <summary>
@@ -75,8 +111,26 @@ namespace Hotel.App.API.Controllers
         }
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public IActionResult Put(int id, [FromBody]SysMenuViewModel value)
         {
+            var _menuDb = _sysMenuRpt.GetSingle(id);
+
+            if (_menuDb == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _menuDb.MenuName = value.MenuName;
+                _menuDb.MenuOrder = value.MenuOrder;
+                _menuDb.RoleIds = value.RoleIds;
+                _menuDb.MenuAddr = value.MenuAddr;
+                _menuDb.Icon = value.Icon;
+                _sysMenuRpt.Commit();
+
+                value = Mapper.Map<sys_menu, SysMenuViewModel>(_menuDb);
+            }
+            return new NoContentResult();
         }
 
         // DELETE api/values/5

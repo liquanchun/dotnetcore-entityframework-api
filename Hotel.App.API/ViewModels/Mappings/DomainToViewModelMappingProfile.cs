@@ -36,6 +36,8 @@ namespace Hotel.App.API.ViewModels.Mappings
                     map => map.MapFrom(u => u.SchedulesCreated.Count()));
 
             Mapper.CreateMap<sys_user, SysUserViewModel>();
+
+            Mapper.CreateMap<sys_menu, SysMenuViewModel>();
         }
     }
 }
